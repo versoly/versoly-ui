@@ -20,8 +20,13 @@
   ],
   "license": "MIT",
   "main": "dist/versoly-ui.js",
-  "repository": "https://github.com/versoly/versoly-ui.git",
-  "bugs": "https://github.com/versoly/versoly-ui/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/versoly/versoly-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/versoly/versoly-ui/issues"
+  },
   "homepage": "https://versoly.com/versoly-ui",
   "contributors": [
     "Volkan Kaya <volkan@versoly.com>"
@@ -50,5 +55,5 @@
     "webpack-dev-server": "^3.11.2",
     "terser-webpack-plugin": "^5.3.1"
   },
-  "dependencies": {}
+  "author": "Versoly"
 }

@@ -7,13 +7,13 @@
 
 
 <p>
-    <a href="https://discord.versoly.com"><img src="https://img.shields.io/discord/711811980482314310?color=%237289da&label=Discord" alt="Discord"></a>
+    <a href="https://discord.versoly.com"><img src="https://flat.badgen.net/badge/icon/discord?icon=discord&label" alt="Discord"></a>
     <a href="https://versoly.com/versoly-ui/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
     <a href="https://bundlephobia.com/result?p=versoly-ui">
         <img src="https://flat.badgen.net/bundlephobia/minzip/versoly-ui?icon=packagephobia&label&color=blue&cache=10800" alt="gzip bundle size">
     </a>
-    <a href="https://unpkg.com/versoly/versoly-ui.js">
-        <img src="https://flat.badgen.net/badgesize/brotli/https://cdn.jsdelivr.net/npm/versoly/versoly-ui.js?icon=jsdelivr&label&color=blue&cache=10800" alt="brotli bundle size">
+    <a href="https://unpkg.com/versoly-ui@1.0.6/dist/versoly-ui.js">
+        <img src="https://flat.badgen.net/badgesize/brotli/https://unpkg.com/versoly-ui@1.0.6/dist/versoly-ui.js?icon=jsdelivr&label&color=blue&cache=10800" alt="brotli bundle size">
     </a>
 </p>
 </div>
@@ -56,4 +56,5 @@ If you need help or just want to discuss about the library join the community on
 For casual chatting with others using the library:
 
 [Join the Versoly Discord Server](https://discord.versoly.com)
+
 
