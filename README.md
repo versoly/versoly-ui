@@ -12,8 +12,8 @@
     <a href="https://bundlephobia.com/result?p=versoly-ui">
         <img src="https://flat.badgen.net/bundlephobia/minzip/versoly-ui?icon=packagephobia&label&color=blue&cache=10800" alt="gzip bundle size">
     </a>
-    <a href="https://unpkg.com/versoly-ui@1.0.6/dist/versoly-ui.js">
-        <img src="https://flat.badgen.net/badgesize/brotli/https://unpkg.com/versoly-ui@1.0.6/dist/versoly-ui.js?icon=jsdelivr&label&color=blue&cache=10800" alt="brotli bundle size">
+    <a href="https://unpkg.com/versoly-ui@1.0.7/dist/versoly-ui.js">
+        <img src="https://flat.badgen.net/badgesize/brotli/https://unpkg.com/versoly-ui@1.0.7/dist/versoly-ui.js?icon=jsdelivr&label&color=blue&cache=10800" alt="brotli bundle size">
     </a>
 </p>
 </div>

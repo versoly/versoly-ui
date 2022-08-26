@@ -6,6 +6,7 @@ import modal from './modal'
 import tabs from './tabs'
 import { handleResize } from '../utils'
 
+(function() {
 window.vInitialized = false
 window.initializeVUI = () => {
   if (window.vInitialized) {
@@ -26,3 +27,4 @@ document.addEventListener('DOMContentLoaded', initializeVUI)
 if (document.readyState !== "loading") {
   initializeVUI()
 }
+})();
