@@ -1,88 +1,53 @@
 import { addEventListeners, addEscapeListener } from '../utils'
 
-export default () => document.querySelectorAll('[data-toggle="dropdown"]').forEach(element => {
-  let dropdown = element.nextSibling.nextSibling
-  // let dropdownHeight = dropdown && dropdown.offsetHeight
-  // console.log(dropdown)
+export default () => document.querySelectorAll('[data-toggle="dropdown"]').forEach(trigger => {
 
-  function toggle() {
-    if (dropdown.className.includes('show')) {
-      hide()
-      return
-    }
-    dropdown.classList.add('block')
-    // dropdown.classList.remove('hidden')
+  const {computePosition, shift, offset} = window.FloatingUIDOM
+  const target = trigger.nextElementSibling;
+  const options = eval('(' + trigger.dataset.options + ')' || '') || {};
 
-    window.setTimeout(() => {
-      dropdown.classList.toggle('show')
-    }, 50)
+  let middleware = [
+    offset(6),
+    shift({
+      padding: 5,
+    }),
+  ];
 
-    // if (dropdown.getAttribute('class').includes('show')) {
-    //   document.getElementById('nav').style.height = document.getElementById('nav').offsetHeight + dropdownHeight + 'px'
-    //   dropdown.style.height = dropdownHeight + 'px'
-    // }
-    // else {
-    //   dropdown.style.height = '0px'
-    // }
-    // setTimeout(() => dropdown.classList.toggle('block'), 1000)
-    // dropdown.style.position = 'absolute';
-  }
-
-  function hide() {
-    dropdown.classList.remove('show');
-
-    window.setTimeout(() => {
-      // dropdown.classList.add('hidden');
-      dropdown.classList.remove('block')
-    }, 300)
-
-    // if (dropdown.getAttribute('class').includes('show')) {
-    //   document.getElementById('nav').style.height = document.getElementById('nav').offsetHeight - dropdownHeight + 'px'
-    //   dropdown.style.height = '0px'
-    //   dropdown.style.padding = 0
-    //   dropdown.style.width = '0px'
-    // }
-  }
-
-  addEventListeners(element, ['click'], toggle);
-  // addEventListeners(element, ['blur'], hide);
-
-  addEventListeners(element, ['focus', 'mouseenter'], () => {
-    let popperInstance = Popper.createPopper(element, dropdown, {
-      placement: 'bottom-start',
-      modifiers: [
-        {
-          name: 'offset',
-          options: {
-            offset: [0, 10],
-          },
-        },
-      ]
+  function update() {
+    computePosition(trigger, target, {
+      placement: options.placement || 'bottom',
+      middleware,
+    }).then(({ x, y }) => {
+      Object.assign(target.style, {
+        left: `${x}px`,
+        top: `${y}px`,
+      });
     });
-    dropdown.classList.add('block')
-    popperInstance.forceUpdate()
-    popperInstance.update()
-
-    window.setTimeout(() => {
-      if (!dropdown.getAttribute('class').includes('show')) {
-        dropdown.classList.remove('block')
-      }
-    }, 50)
-  });
-
-  addEventListeners(element, ['blur', 'mouseleave'], () => {
-    if (!dropdown.getAttribute('class').includes('show')) {
-      dropdown.classList.remove('block')
-    }
-  });
-  addEscapeListener(hide)
-
-  const handleDropdownOutsideClick = (event) => {
-    const targetElement = event.target; // clicked element
-    if (targetElement !== dropdown && targetElement !== element && !element.contains(targetElement)) {
-        hide()
-    }
   }
 
-  document.body.addEventListener('click', handleDropdownOutsideClick);
+  const show = () => {
+    target.style.display = 'block';
+    requestAnimationFrame(() => {
+      target.classList.add('opacity-100', 'visible');
+    });
+    update();
+  };
+
+  const hide = () => {
+    target.style.display = '';
+    target.classList.remove('opacity-100', 'visible');
+  };
+
+  const toggle = () => {
+    if (target.style.display === 'block') {
+      hide();
+      return;
+    }
+    show();
+  };
+
+  addEventListeners(trigger, ['blur'], hide)
+  addEventListeners(trigger, ['click'], toggle)
+
+  addEscapeListener(hide)
 })
