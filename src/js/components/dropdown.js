@@ -2,8 +2,9 @@ import { addEventListeners, addEscapeListener } from '../utils'
 
 export default () => document.querySelectorAll('[data-toggle="dropdown"]').forEach(trigger => {
 
-  const {computePosition, shift, offset} = window.FloatingUIDOM
+  const {computePosition, shift, offset} = window.FloatingUIDOM;
   const target = trigger.nextElementSibling;
+  const parent = trigger.parentElement;
   const options = eval('(' + trigger.dataset.options + ')' || '') || {};
 
   let middleware = [
@@ -46,8 +47,12 @@ export default () => document.querySelectorAll('[data-toggle="dropdown"]').forEa
     show();
   };
 
-  addEventListeners(trigger, ['blur'], hide)
+  parent.addEventListener('focusout', (e) => {
+    if (parent.contains(e.relatedTarget) || !document.hasFocus()) {
+      return
+    };
+    hide()
+  });
   addEventListeners(trigger, ['click'], toggle)
-
   addEscapeListener(hide)
 })
