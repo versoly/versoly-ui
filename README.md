@@ -5,15 +5,14 @@
     <a href="https://versoly.com/versoly-ui" align=""><h1>Versoly UI</h1></a>
     <p>Tailwind CSS components library based on Bootstrap, build websites without reinventing the wheel.</p>
 
-
 <p>
     <a href="https://discord.versoly.com"><img src="https://flat.badgen.net/badge/icon/discord?icon=discord&label" alt="Discord"></a>
     <a href="https://versoly.com/versoly-ui/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
     <a href="https://bundlephobia.com/result?p=versoly-ui">
         <img src="https://flat.badgen.net/bundlephobia/minzip/versoly-ui?icon=packagephobia&label&color=blue&cache=10800" alt="gzip bundle size">
     </a>
-    <a href="https://unpkg.com/versoly-ui@2.0.1/dist/versoly-ui.js">
-        <img src="https://flat.badgen.net/badgesize/brotli/https://unpkg.com/versoly-ui@2.0.1/dist/versoly-ui.js?icon=jsdelivr&label&color=blue&cache=10800" alt="brotli bundle size">
+    <a href="https://unpkg.com/versoly-ui@2.1.1/dist/versoly-ui.js">
+        <img src="https://flat.badgen.net/badgesize/brotli/https://unpkg.com/versoly-ui@2.1.1/dist/versoly-ui.js?icon=jsdelivr&label&color=blue&cache=10800" alt="brotli bundle size">
     </a>
 </p>
 </div>
