@@ -27,6 +27,30 @@ For full documentation, visit [versoly.com/versoly-ui](https://versoly.com/verso
 
 Versoly UI is an open source components library built on Tailwind CSS and based on Bootstrap classes and components. Websites usually always include a small number of the same components such as buttons, cards and navbars. Versoly UI provides these components similar to Bootstrap and allows for developers to easily swap styling between projects without the manual work.
 
+- **Components**
+    - Accordion
+    - Alert
+    - Badge
+    - Button
+    - Button Group
+    - Card
+    - Footer
+    - Icon
+    - Modal
+    - Navbar
+    - Pagination
+    - Parallax
+    - Progress
+    - Tab
+    - Table
+
+- **Forms**
+    - Inputs
+    - Select
+    - Checkbox
+    - Radio
+    - Layout
+
 To view all the components go to [versoly.com/versoly-ui/components/alert](https://versoly.com/versoly-ui/components/alert).
 
 ## Getting started
