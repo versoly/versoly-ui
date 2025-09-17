@@ -1,35 +1,26 @@
 {
   "name": "versoly-ui",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Versoly UI - Tailwind CSS framework based on Bootstrap",
   "author": "Versoly",
   "keywords": [
-    "versoly",
-    "versoly ui",
-    "tailwind",
     "tailwind components",
     "tailwind elements",
     "tailwind library",
     "tailwind sections",
-    "tailwind css",
     "tailwind ui",
     "ui kit",
     "bootstrap to tailwind",
-    "html",
-    "css",
-    "javascript",
     "dropdown Floating UI"
   ],
   "license": "MIT",
-  "main": "dist/versoly-ui.umd.cjs",
+  "main": "./dist/versoly-ui.js",
   "unpkg": "dist/versoly-ui.iife.js",
   "jsdelivr": "dist/versoly-ui.iife.js",
-  "module": "./dist/versoly-ui.js",
+  "module": "./dist/versoly-ui.mjs",
   "exports": {
-    ".": {
-      "import": "./dist/versoly-ui.js",
-      "require": "./dist/versoly-ui.umd.cjs"
-    }
+    ".": "./dist/versoly-ui.js",
+    "./package.json": "./package.json"
   },
   "repository": {
     "type": "git",
@@ -44,12 +35,17 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "tsdown",
+    "build:watch": "tsdown --watch"
   },
   "devDependencies": {
-    "vite": "^5.0.10"
-  },
-  "dependencies": {
-    "@floating-ui/dom": "^1.0.1"
+    "@kainstar/eslint-config": "^2.0.0",
+    "eslint": "^9.35.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.15.1",
+    "type-fest": "^4.41.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
   }
 }

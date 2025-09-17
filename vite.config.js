@@ -1,11 +1,11 @@
-import { resolve } from "path";
-import { name } from "./package.json";
+import { resolve } from 'path';
+import { name } from './package.json';
 
 const getPackageName = () => {
-  return (name.includes("@") ? name.split("/")[1] : name).replace(".", "-");
+  return (name.includes('@') ? name.split('/')[1] : name).replace('.', '-');
 };
 
-const NAME = "VersolyUI";
+const NAME = 'VersolyUI';
 
 const fileName = {
   es: `${getPackageName()}.mjs`,
@@ -15,16 +15,16 @@ const fileName = {
 
 const config = {
   build: {
-    target: ["chrome58", "firefox57", "safari11", "edge79"],
+    target: ['chrome58', 'firefox57', 'safari11', 'edge79'],
     lib: {
-      entry: resolve(__dirname, "src/index.js"),
+      entry: resolve(__dirname, 'src/index.js'),
       name: NAME,
-      formats: ["es", "cjs", "iife"],
+      formats: ['es', 'cjs', 'iife'],
       fileName: (format) => fileName[format],
     },
   },
   server: {
-    port: 3002,
+    port: 3005,
     hmr: true,
     watch: {
       usePolling: true,

@@ -1,12 +1,4 @@
-import {
-  accordion,
-  collapse,
-  dismiss,
-  dropdown,
-  modal,
-  tabs,
-  handleResize,
-} from "./components";
+import { accordion, collapse, dismiss, dropdown, modal, tabs, handleResize } from './plugins/index';
 
 (function () {
   window.vInitialized = false;
@@ -26,8 +18,8 @@ import {
     handleResize();
   };
 
-  document.addEventListener("DOMContentLoaded", initializeVUI);
-  if (document.readyState !== "loading") {
-    initializeVUI();
+  document.addEventListener('DOMContentLoaded', window.initializeVUI);
+  if (document.readyState !== 'loading') {
+    window.initializeVUI();
   }
 })();
