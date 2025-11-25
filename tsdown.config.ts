@@ -12,7 +12,13 @@ const sharedConfig = {
 export default defineConfig([
   {
     ...sharedConfig,
-    target: ['chrome58', 'firefox57', 'safari11', 'edge79'],
+    target: [
+      //
+      'chrome' + '109',
+      'firefox' + '135',
+      'safari' + '17',
+      'edge' + '135',
+    ],
     format: ['cjs', 'iife'],
   },
   {

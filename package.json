@@ -1,6 +1,6 @@
 {
   "name": "versoly-ui",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Versoly UI - Tailwind CSS framework based on Bootstrap",
   "author": "Versoly",
   "keywords": [
@@ -14,12 +14,12 @@
     "dropdown Floating UI"
   ],
   "license": "MIT",
-  "main": "./dist/versoly-ui.js",
+  "main": "./dist/versoly-ui.mjs",
   "unpkg": "dist/versoly-ui.iife.js",
   "jsdelivr": "dist/versoly-ui.iife.js",
   "module": "./dist/versoly-ui.mjs",
   "exports": {
-    ".": "./dist/versoly-ui.js",
+    ".": "./dist/versoly-ui.mjs",
     "./package.json": "./package.json"
   },
   "repository": {
